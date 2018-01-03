@@ -50,7 +50,7 @@ mvn package -DskipTests=true'''
     stage('Staging') {
       steps {
         echo 'Staging deployment'
-        sh 'echo "copy war to tomcat"'
+        build 'staging-deployment'
       }
     }
     stage('Selenium Tests') {
